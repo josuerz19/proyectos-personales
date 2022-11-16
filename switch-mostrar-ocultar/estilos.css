@@ -1,0 +1,117 @@
+@import url('https://fonts.googleapis.com/css2?family=Baloo+2&family=Bungee+Spice&family=Poppins:wght@900&display=swap');
+
+*
+{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins';
+}
+
+body
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-color: #d5d5d5;
+}
+
+.container
+{
+    position: relative;
+    width: 0;
+    height: 0;
+    background-color: #395B64;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 18px;
+    transition: 0.5s;
+
+}
+
+.container::before
+{
+    content: "";
+    position: absolute;
+    bottom: -15px;
+    width: 40px;
+    height: 40px;
+    background-color: #395B64;
+    border-radius: 6px;
+    opacity: 0;
+    transform: rotate(45deg);
+    transition: 0.5s;
+}
+
+.content
+{
+    text-align: justify;
+    min-width: 400px;
+    padding: 40px;
+    color: #fff;
+    opacity: 0;
+    transition: 0.5s;
+    transform: scale(0);
+}
+
+h2
+{
+    text-align: center;
+    color: #3fffec;
+}
+
+.btn-toggle
+{
+    position: absolute;
+    bottom: -20px;
+    min-width: 60px;
+    height: 60px;
+    background-color: #27bba2;
+    border-radius: 8px;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: 0.5s;
+}
+
+.btn-toggle::before
+{
+    font-family: Arial;
+    content: "+";
+    font-size: 46px;
+    color: #fff;
+}
+
+.activar .btn-toggle
+{
+    bottom: -100px;
+    transform: rotate(135deg);
+    background-color: coral;
+
+}
+
+.activar .content
+{
+    opacity: 1;
+    transition-delay: 0.1s;
+    transform: scale(1);
+}
+
+.activar::before
+{
+    opacity: 1;
+    transition-delay: 0.1s;
+}
+
+.activar
+{
+    width: 400px;
+    height: 400px;
+    opacity: 1;
+}
+
+
+
